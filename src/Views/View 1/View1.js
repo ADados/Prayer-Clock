@@ -31,7 +31,7 @@ class View1 extends Component {
           <Logo />
         </div>
         <div className="row">
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-4">
             <div className="row">
               <Clock />
             </div>
@@ -44,7 +44,7 @@ class View1 extends Component {
               />
             </div>
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-8">
             <div className="row">
               <PrayerTimes />
             </div>

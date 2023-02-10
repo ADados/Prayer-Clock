@@ -15,6 +15,16 @@ class PrayerTimes extends Component {
     return _data.getPrayerTimes();
   }
 
+  convertTime(time) {
+    let hours = parseInt(time.substring(0, 2));
+    let minutes = time.substring(3, 5);
+    let ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    let convertedTime = hours + ':' + minutes + ' ' + ampm;
+    return convertedTime;
+  }
+
   getAsrRows() {
     if (
       this.state.prayerTimes['asr_1_begins'] &&
@@ -24,8 +34,8 @@ class PrayerTimes extends Component {
         <tr>
           <th>Asr</th>
           <td />
-          <td>{this.state.prayerTimes['asr_1_begins']}</td>
-          <td>{this.state.prayerTimes['asr_jamaah']}</td>
+          <td>{this.convertTime(this.state.prayerTimes['asr_1_begins'])}</td>
+          <td>{this.convertTime(this.state.prayerTimes['asr_jamaah'])}</td>
         </tr>
       );
     } else if (
@@ -36,8 +46,8 @@ class PrayerTimes extends Component {
         <tr>
           <th>Asr</th>
           <td />
-          <td>{this.state.prayerTimes['asr_2_begins']}</td>
-          <td>{this.state.prayerTimes['asr_jamaah']}</td>
+          <td>{this.convertTime(this.state.prayerTimes['asr_2_begins'])}</td>
+          <td>{this.convertTime(this.state.prayerTimes['asr_jamaah'])}</td>
         </tr>
       );
     } else {
@@ -45,8 +55,10 @@ class PrayerTimes extends Component {
         <tr key="asr1">
           <th rowSpan="2">'Asr</th>
           <td className="mithl-text">mithl 1</td>
-          <td>{this.state.prayerTimes['asr_1_begins']}</td>
-          <td rowSpan="2">{this.state.prayerTimes['asr_jamaah']}</td>
+          <td>{this.convertTime(this.state.prayerTimes['asr_1_begins'])}</td>
+          <td rowSpan="2">
+            {this.convertTime(this.state.prayerTimes['asr_jamaah'])}
+          </td>
         </tr>,
         <tr key="asr2">
           <td className="mithl-text">mithl 2</td>
@@ -83,27 +95,31 @@ class PrayerTimes extends Component {
             <tr>
               <th>Fajr</th>
               <td />
-              <td>{this.state.prayerTimes['fajr_begins']}</td>
-              <td>{this.state.prayerTimes['fajr_jamaah']}</td>
+              <td>{this.convertTime(this.state.prayerTimes['fajr_begins'])}</td>
+              <td>{this.convertTime(this.state.prayerTimes['fajr_jamaah'])}</td>
             </tr>
             <tr>
               <th>Zuhr</th>
               <td />
-              <td>{this.state.prayerTimes['zuhr_begins']}</td>
-              <td>{this.state.prayerTimes['zuhr_jamaah']}</td>
+              <td>{this.convertTime(this.state.prayerTimes['zuhr_begins'])}</td>
+              <td>{this.convertTime(this.state.prayerTimes['zuhr_jamaah'])}</td>
             </tr>
             {asrRows}
             <tr>
               <th>Maghrib</th>
               <td />
-              <td>{this.state.prayerTimes['maghrib_begins']}</td>
-              <td>{this.state.prayerTimes['maghrib_jamaah']}</td>
+              <td>
+                {this.convertTime(this.state.prayerTimes['maghrib_begins'])}
+              </td>
+              <td>
+                {this.convertTime(this.state.prayerTimes['maghrib_jamaah'])}
+              </td>
             </tr>
             <tr>
               <th>Isha</th>
               <td />
-              <td>{this.state.prayerTimes['isha_begins']}</td>
-              <td>{this.state.prayerTimes['isha_jamaah']}</td>
+              <td>{this.convertTime(this.state.prayerTimes['isha_begins'])}</td>
+              <td>{this.convertTime(this.state.prayerTimes['isha_jamaah'])}</td>
             </tr>
           </tbody>
         </table>

@@ -2,6 +2,12 @@
   width: 100%;
 }
 
+.PrayerTimeWrapper {
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+}
+
 .PrayerTimes {
   font-size: 3.5em;
   text-align: right;

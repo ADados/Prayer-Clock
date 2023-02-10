@@ -20,8 +20,8 @@ class Branding extends Component {
 
   getCustomCSS() {
     var background_percentage = {
-      left: this.state.slider_mode === 'single-view' ? 30 : 50,
-      right: this.state.slider_mode === 'single-view' ? 30 : 50
+      left: this.state.slider_mode === 'single-view' ? 30 : 80,
+      right: this.state.slider_mode === 'single-view' ? 30 : 20
     };
 
     return `

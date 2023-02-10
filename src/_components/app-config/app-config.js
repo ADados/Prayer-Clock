@@ -26,11 +26,9 @@ class AppConfig {
       alert('REACT_APP_APP_CONFIG_SPREADSHEET_URL env not set');
     }
 
-    return axios
-      .get(`${spreadsheetUrl}&_cacheBust=${Math.random()}`)
-      .then(json => {
-        this.storeAppConfig(json.data);
-      });
+    return axios.get(`${spreadsheetUrl}`).then(json => {
+      this.storeAppConfig(json.data);
+    });
   }
 
   storeAppConfig(_appConfig = []) {

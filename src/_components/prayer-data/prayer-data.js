@@ -11,10 +11,7 @@ class PrayerData {
   getPrayerTimes(date = null) {
     date = date === null ? moment().format('DD/MM/YYYY') : date;
     var data = this.getPrayerData();
-    return find(data, {
-      day: moment(date, 'DD/MM/YYYY').format('DD'),
-      month: moment(date, 'DD/MM/YYYY').format('MM')
-    });
+    return data[date];
   }
 
   getSpeadsheetUrl() {
@@ -30,11 +27,9 @@ class PrayerData {
       alert('REACT_APP_PRAYER_DATA_SPREADSHEET_URL env not set');
     }
 
-    return axios
-      .get(`${spreadsheetUrl}&_cacheBust=${Math.random()}`)
-      .then(json => {
-        this.storePrayerData(json.data);
-      });
+    return axios.get(`${spreadsheetUrl}`).then(json => {
+      this.storePrayerData(json.data);
+    });
   }
 
   storePrayerData(prayerData = []) {
