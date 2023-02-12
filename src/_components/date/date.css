@@ -2,6 +2,13 @@
   color: #fff;
   font-size: 3em;
   margin-left: 15px;
+  width: 100%;
+}
+
+.Date {
+  padding: 170px 57px 57px;
+  text-align: center;
+  color: white;
 }
 
 @media only screen and (max-width: 600px) {

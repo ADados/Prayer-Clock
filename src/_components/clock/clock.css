@@ -2,8 +2,10 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   width: auto;
   padding: 15px;
-  background-color: white;
+  background-color: #ffffff4f;
   font-weight: 900;
+  border-radius: 50px;
+  margin: 20px auto auto;
 }
 
 .Clock {

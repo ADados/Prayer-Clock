@@ -3,7 +3,11 @@ body {
   padding: 20px;
   padding-top: 0px;
   font-family: 'PT Sans', sans-serif;
-  background: linear-gradient(to right, #11846d 50%, #0d6554 50%);
+  background: url('images/aqsa_bak.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: #fff;
 }
 

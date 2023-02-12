@@ -1,12 +1,12 @@
 .LogoWrapper img {
   display: block;
   position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .LogoWrapper--vertical img {
-  width: 150px;
+  width: 299px;
+  margin: 76px 20px;
+  right: 0;
 }
 
 .LogoWrapper--horizontal img {

@@ -27,20 +27,15 @@ class Branding extends Component {
     return `
       /* MAIN BRANDING */
       body {
-        background: linear-gradient(to right, ${this.state.primary_colour} ${background_percentage.right}%, ${this.state.secondary_colour} ${background_percentage.left}%);
-        color: ${this.state.primary_text_colour};
+         color: ${this.state.primary_text_colour};
       }
 
       @media only screen and (max-width: 992px) {
         body {
-          background: linear-gradient(to right, ${this.state.primary_colour} 50%, ${this.state.primary_colour} 50%);
-        }
+          }
       }
 
       /* CLOCK BRANDING */
-      .ClockWrapper {
-        background-color: ${this.state.clock_background_colour};
-      }
       .Clock {
         color: ${this.state.primary_colour};
       }

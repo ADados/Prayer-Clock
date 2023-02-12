@@ -31,26 +31,27 @@ class View1 extends Component {
           <Logo />
         </div>
         <div className="row">
-          <div className="col-12 col-md-4">
+          <div className="col-12">
             <div className="row">
               <Clock />
             </div>
+
             <div className="row">
               <Date />
             </div>
-            <div className="row">
+            {/*<div className="row">
               <AdditionalMessage
                 message={this.state._appConfig.get('Text_Donate_Message')}
               />
-            </div>
+            </div>*/}
           </div>
-          <div className="col-12 col-md-8">
+          <div className="col-12">
             <div className="row">
               <PrayerTimes />
             </div>
-            <div className="row">
+            {/*<div className="row">
               <SunriseAndZawwal />
-            </div>
+            </div>*/}
           </div>
         </div>
         <BuildNumber />
