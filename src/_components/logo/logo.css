@@ -5,7 +5,7 @@
 
 .LogoWrapper--vertical img {
   width: 299px;
-  margin: 55px 20px;
+  margin: 75px 35px;
   right: 0;
 }
 
@@ -15,6 +15,6 @@
 
 @media only screen and (min-width: 600px) and (max-width: 1024px) {
   .LogoWrapper img {
-    width: 280px;
+    width: 300px;
   }
 }
